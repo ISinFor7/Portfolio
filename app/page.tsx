@@ -1,55 +1,35 @@
+import Lines1 from "@/components/lines1";
+import NavMenu from "@/components/navmenu";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <NavMenu></NavMenu>
+      <main className="flex flex-row gap-[32px] content-center row-start-2 items-center justify-center sm:items-start text-gray-700 dark:text-amber-700 text-shadow-md boxDiv p-6">
+        <div className="flex flex-col gap-5 items-center sm:items-start">
+          <div className="flex flex-col gap-3 mb-4 rounded-2xl p-3 items-start">
+            <p className="text-lg font-extrabold px-1 from-[#9C8A6F] to-[#AD9E8B] bg-linear-to-b text-white ">Berrouiguet Lilo</p>
+            <p className="text-sm font-semibold px-1 from-[#9C8A6F] to-[#AD9E8B] bg-linear-to-b text-white">
+              Développeur web <br /> Développeur UI/UX
+            </p>
+          </div>
+          <div className="flex gap-4 items-center flex-col sm:flex-row">
+            <a
+              className="rounded-full border-3 border-solid border-b-[#8B6465] border-t-[#311E1E#8B6465] transition-colors flex items-center justify-center from-[#9C8A6F] to-[#AD9E8B] bg-linear-to-b gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base text-white h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
+              href="#projects"
+            >
+              Continuer la visite
+            </a>
+          </div>
         </div>
+          <Image
+            className="top-0 left-0 rounded-full "
+            src="/photo.png"
+            alt="Me"
+            width={180}
+            height={180}
+          />
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
